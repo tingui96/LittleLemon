@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # The settings for app updated for the Graded assessment
     'restaurant',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'LittleLemonAPI',
+    'djoser'
 ]
 
 MIDDLEWARE = [
@@ -84,6 +88,9 @@ DATABASES = {
         'PORT' : '3306',
         'USER' : 'root',
         'PASSWORD' : 'ydnay123',
+        'OPTIONS': {   
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
+        } 
     }
 }
 
